@@ -1,0 +1,16 @@
+# Bridge multiple (ethernet) interfaces so that machine acts like a switch
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    enp6s0:
+      dhcp4: no
+    enp1s0f0:
+      dhcp4: no
+    enp1s0f1:
+      dhcp4: no
+  bridges:
+    br0:
+      dhcp4: yes
+      interfaces: [enp6s0, enp1s0f0, enp1s0f1]
+      addresses: [192.168.50.110/24]
