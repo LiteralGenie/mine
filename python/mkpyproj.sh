@@ -46,14 +46,18 @@ write ".gitignore" "$contents"
 
 # vscode (settings.json)
 contents='{
-    "[python]": {
-        "editor.wordBasedSuggestions": false,
-        "editor.defaultFormatter": "black",
-        "editor.formatOnSave": true
-    },
-    "python.analysis.autoImportCompletions": true,
-    "autoDocstring.docstringFormat": "numpy-notypes",
-    "autoDocstring.customTemplatePath": ".vscode/docstrings.mustache"
+  "[python]": {
+    "editor.wordBasedSuggestions": false,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "python.sortImports.args": ["--profile", "black"],
+  "python.analysis.autoImportCompletions": true,
+  "autoDocstring.docstringFormat": "numpy-notypes",
+  "autoDocstring.customTemplatePath": ".vscode/docstrings.mustache"
 }
 '
 write ".vscode/settings.json" "$contents"
