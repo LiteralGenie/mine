@@ -3,6 +3,7 @@ Scripts that I tend to reuse between projects.
 <blockquote>
 <details>
 <summary>Python</summary>
+        
         - mkpyproj.sh
           - Init a project (folders, git, vscode settings, etc)
         - json_cache.py
