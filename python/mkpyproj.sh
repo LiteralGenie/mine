@@ -54,10 +54,9 @@ contents='{
       "source.organizeImports": true
     }
   },
-  "python.sortImports.args": ["--profile", "black"],
+  "isort.args": ["--profile", "black"],
   "python.analysis.autoImportCompletions": true,
-  "autoDocstring.docstringFormat": "numpy-notypes",
-  "autoDocstring.customTemplatePath": ".vscode/docstrings.mustache"
+  "autoDocstring.docstringFormat": "numpy-notypes"
 }
 '
 write ".vscode/settings.json" "$contents"
